@@ -143,7 +143,7 @@ Antes da montagem:
 4. Mantenha cabos e suportes fora da região principal do escoamento.
 
 
-### 5. Installing the electronics
+### 5. Instalação da eletronica
 
 Conecte os encoders no ESP32 de acordo com o modelo esquematico que esta disponivel em:
 
