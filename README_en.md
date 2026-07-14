@@ -126,7 +126,7 @@ Each signal line uses an external `10 kΩ` pull-up resistor connected to `3.3 V`
 
 See the complete schematic:
 
-[`electronics/eletronics.md`](./electronics/eletronics_en.md)
+[`electronics/electronics.md`](./electronics/electronics_en.md)
 
 ## Firmware
 

@@ -126,7 +126,7 @@ Cada linha de sinal utiliza um resistor pull-up externo de `10 kΩ` conectado a 
 
 Consulte o esquema completo:
 
-[`electronics/eletronics.md`](./electronics/eletronics_pt.md)
+[`electronics/electronics.md`](./electronics/electronics_pt.md)
 
 ## Firmware
 
