@@ -1,4 +1,4 @@
-# Electronica
+# Eletronica
 
 Esta pasta contém o **diagrama esquemático eletrônico** do projeto.
 
