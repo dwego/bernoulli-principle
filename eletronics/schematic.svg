@@ -1,0 +1,126 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1000" viewBox="0 0 1600 1000">
+<style>
+  text { font-family: Arial, Helvetica, sans-serif; fill:#000; }
+  .wire { stroke:#000; stroke-width:3; fill:none; stroke-linecap:square; }
+  .thin { stroke:#000; stroke-width:2.5; fill:none; stroke-linecap:square; }
+  .component { stroke:#000; stroke-width:3; fill:#fff; }
+  .node { fill:#000; }
+  .label { font-size:22px; }
+  .small { font-size:18px; }
+  .ref { font-size:22px; font-weight:bold; }
+  .net { font-size:20px; font-weight:bold; }
+</style>
+<rect x="0" y="0" width="1600" height="1000" fill="#fff"/>
+
+<!-- +3V3 rail -->
+<line x1="160" y1="120" x2="1430" y2="120" class="wire"/>
+<text x="85" y="127" class="net">+3V3</text>
+<polygon points="155,120 138,112 138,128" fill="#000"/>
+
+<!-- GND rail -->
+<line x1="160" y1="900" x2="1430" y2="900" class="wire"/>
+<text x="85" y="907" class="net">GND</text>
+<polygon points="155,900 138,892 138,908" fill="#000"/>
+
+<!-- J1 -->
+<rect x="180" y="210" width="250" height="220" class="component"/>
+<text x="305" y="195" text-anchor="middle" class="ref">J1</text>
+<text x="235" y="260" class="label">1  VCC</text>
+<text x="235" y="310" class="label">2  GND</text>
+<text x="235" y="360" class="label">3  A</text>
+<text x="235" y="410" class="label">4  B</text>
+<circle cx="410" cy="273" r="5" class="node"/>
+<circle cx="410" cy="318" r="5" class="node"/>
+<circle cx="410" cy="363" r="5" class="node"/>
+<circle cx="410" cy="408" r="5" class="node"/>
+<text x="305" y="455" text-anchor="middle" class="small">TOP ENCODER</text>
+
+<!-- J2 -->
+<rect x="180" y="560" width="250" height="220" class="component"/>
+<text x="305" y="545" text-anchor="middle" class="ref">J2</text>
+<text x="235" y="610" class="label">1  VCC</text>
+<text x="235" y="660" class="label">2  GND</text>
+<text x="235" y="710" class="label">3  A</text>
+<text x="235" y="760" class="label">4  B</text>
+<circle cx="410" cy="623" r="5" class="node"/>
+<circle cx="410" cy="668" r="5" class="node"/>
+<circle cx="410" cy="713" r="5" class="node"/>
+<circle cx="410" cy="758" r="5" class="node"/>
+<text x="305" y="805" text-anchor="middle" class="small">BOTTOM ENCODER</text>
+
+<!-- U1 ESP32 -->
+<rect x="1130" y="250" width="280" height="460" class="component"/>
+<text x="1270" y="195" text-anchor="middle" class="ref">U1</text>
+<text x="1270" y="220" text-anchor="middle" class="label">ESP32-WROOM-32D</text>
+<text x="1270" y="240" text-anchor="middle" class="small">DEV BOARD</text>
+
+<circle cx="1130" cy="390" r="5" class="node"/><text x="1155" y="397" class="label">GPIO32</text>
+<circle cx="1130" cy="450" r="5" class="node"/><text x="1155" y="457" class="label">GPIO33</text>
+<circle cx="1130" cy="580" r="5" class="node"/><text x="1155" y="587" class="label">GPIO14</text>
+<circle cx="1130" cy="640" r="5" class="node"/><text x="1155" y="647" class="label">GPIO27</text>
+<circle cx="1130" cy="290" r="5" class="node"/><text x="1155" y="297" class="label">3V3</text>
+<circle cx="1130" cy="690" r="5" class="node"/><text x="1155" y="697" class="label">GND</text>
+
+<!-- USB connector and label -->
+<rect x="1220" y="730" width="100" height="38" class="component"/>
+<text x="1270" y="754" text-anchor="middle" class="small">USB</text>
+<line x1="1320" y1="749" x2="1490" y2="749" class="wire"/>
+<text x="1410" y="735" text-anchor="middle" class="small">SERIAL USB</text>
+
+<!-- Supply wiring -->
+<path d="M410 273 H500 V120" class="wire"/>
+<path d="M410 623 H530 V120" class="wire"/>
+<path d="M1130 290 H1070 V120" class="wire"/>
+<circle cx="500" cy="120" r="5" class="node"/>
+<circle cx="530" cy="120" r="5" class="node"/>
+<circle cx="1070" cy="120" r="5" class="node"/>
+
+<!-- Ground wiring -->
+<path d="M410 318 H470 V900" class="wire"/>
+<path d="M410 668 H500 V900" class="wire"/>
+<path d="M1130 690 H1080 V900" class="wire"/>
+<circle cx="470" cy="900" r="5" class="node"/>
+<circle cx="500" cy="900" r="5" class="node"/>
+<circle cx="1080" cy="900" r="5" class="node"/>
+
+<!-- Pull-ups R1..R4 -->
+<text x="630" y="160" text-anchor="middle" class="ref">R1</text>
+<text x="630" y="182" text-anchor="middle" class="small">10k</text>
+<line x1="650" y1="120" x2="650" y2="205" class="wire"/>
+<polyline points="650,205 638,217 662,231 638,245 662,259 638,273 662,287 650,300" class="thin"/>
+<line x1="650" y1="300" x2="650" y2="363" class="wire"/>
+
+<text x="740" y="160" text-anchor="middle" class="ref">R2</text>
+<text x="740" y="182" text-anchor="middle" class="small">10k</text>
+<line x1="760" y1="120" x2="760" y2="245" class="wire"/>
+<polyline points="760,245 748,257 772,271 748,285 772,299 748,313 772,327 760,340" class="thin"/>
+<line x1="760" y1="340" x2="760" y2="408" class="wire"/>
+
+<text x="630" y="515" text-anchor="middle" class="ref">R3</text>
+<text x="630" y="537" text-anchor="middle" class="small">10k</text>
+<line x1="650" y1="120" x2="650" y2="555" class="wire"/>
+<polyline points="650,555 638,567 662,581 638,595 662,609 638,623 662,637 650,650" class="thin"/>
+<line x1="650" y1="650" x2="650" y2="713" class="wire"/>
+
+<text x="740" y="575" text-anchor="middle" class="ref">R4</text>
+<text x="740" y="597" text-anchor="middle" class="small">10k</text>
+<line x1="760" y1="120" x2="760" y2="615" class="wire"/>
+<polyline points="760,615 748,627 772,641 748,655 772,669 748,683 772,697 760,710" class="thin"/>
+<line x1="760" y1="710" x2="760" y2="758" class="wire"/>
+
+<!-- Signal wires -->
+<path d="M410 363 H1130" class="wire"/>
+<path d="M410 408 H900 V450 H1130" class="wire"/>
+<path d="M410 713 H900 V580 H1130" class="wire"/>
+<path d="M410 758 H940 V640 H1130" class="wire"/>
+<circle cx="650" cy="363" r="5" class="node"/>
+<circle cx="760" cy="408" r="5" class="node"/>
+<circle cx="650" cy="713" r="5" class="node"/>
+<circle cx="760" cy="758" r="5" class="node"/>
+
+<!-- net labels moved away from wires -->
+<text x="870" y="345" class="net">TOP_A</text>
+<text x="870" y="482" class="net">TOP_B</text>
+<text x="780" y="700" class="net">BOTTOM_A</text>
+<text x="780" y="746" class="net">BOTTOM_B</text>
+</svg>
